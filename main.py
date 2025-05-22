@@ -2,9 +2,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return 'Hello World'
+ 
 
 averias = [
     {
@@ -62,7 +60,7 @@ averias = [
 
  
 
-@app.route("/averias", methods=["GET"])
+@app.route("/", methods=["GET"])
 def get_averias():
     return jsonify(averias), 200
 
